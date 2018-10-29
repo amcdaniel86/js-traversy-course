@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learning Javascript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+<h1 id="heading">Learning Javascript</h1>
+
+    <form method="post" action="something.php" name="myForm" onsubmit="return validateForm()">
+    <div>
+        <label>First Name</label>
+        <input type="text" name="firstName" id="firstName" />
+      </div>
+      <br />
+      <div>
+        <label>Last Name</label>
+        <input type="text" name="lastName" id="lastName" />
+      </div>
+      <br />
+      <div>
+        <!-- <label>Background</label>
+        <select name="background" id="background" onchange="changeBackground(this)">
+          <option value=#e5d3d2>Red</option>
+          <option value=#e2e6d3>Blue</option>
+          <option value="green">Green</option>
+        </select>
+      </div>
+      <br /> -->
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+    
+  <script>
+      function validateForm(){
+      const firstName = document.forms["myForm"]["firstName"].value;
+          if(firstName == null || firstName == ""){
+        alert("First name is required");
+        return false;
+          }
+
+          if (firstName.length < 4){
+        alert("First name must be at least 3 chars");
+        return false;
+          }
+      }
+
+
+
+    // function changeBackground(x){
+    //     console.log(x.value);
+    //     const heading = document.getElementById('heading');
+    //     heading.style.color = x.value;
+    
+    // }
+
+    // function showDate(){
+    //     const time = document.getElementById('time');
+    //     time.innerHTML = Date();
+    //   }
+      
+    //   function clearDate(){
+    //     const time = document.getElementById('time');
+    //     time.innerHTML = '';
+        
+    // }
+    
+    
+    
+    // var heading = document.getElementById('heading');
+    // heading.innerHTML = 'You clicked!';
+    
+    
+    // id.innerHTML = 'You Clicked!';
+    // function doClick(){
+      //   alert('You clicked!');
+      // }
+
+    // const (variables)
+    // letters, numbers, underscores, dollar signs
+    // begins with a letter
+    // _ $
+    // Case sensitive
+    
+    // Objects
+    // Object literal
+    // var person = {
+    //     firstName: "Alex",
+    //     lastName: "McDaniel",
+    //     age: 32,
+    //     children: ['Brianna', 'Nicholas'],
+    //     address: {
+    //       street:"555 Something st",
+    //       city: "Boston",
+    //       state: "MA"
+    //     },
+    //     fullName: function(){
+    //       return this.firstName +" "+this.lastName;
+    //     }
+    // }
+
+    //     console.log(person.fullName());
+
+    // Object Constructor
+        // const apple = new Object();
+        //   apple.color = "red";
+        //   apple.shape = "round";
+
+        //   apple.describe = function(){
+        //     return "An apple is the color "+this.color+" and is the shape "+this.shape;
+        //   }
+        //     console.log(apple.describe());
+
+            // Object Constructor Pattern
+// function Fruit (name, color, shape){
+//       this.name = name;
+//       this.color = color;
+//       this.shape = shape;
+
+//       this.describe = function(){
+//         return "A "+this.name+" is the color "+this.color+" and is the shape "+this.shape;
+//       }
+
+// }
+//   // const apple = new Fruit("apple", "red", "round");
+
+//   const melon = new Fruit("melon", "green", "round");
+
+//   console.log(melon.describe());
+// <!-- 
+// const users = [
+//     {
+//       name: "john doe",
+//       age: 30
+//     },
+//     {
+//       name: "mark smith",
+//       age: 44
+//     },
+//     {
+//       name: "Shelly Williams",
+//       age: 20
+//     }
+// ];
+
+// console.log(users[0].name); -->
+
+  </script>
+</body>
+</html>
